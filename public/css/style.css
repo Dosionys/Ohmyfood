@@ -1,0 +1,202 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../police/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../police/Roboto-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../police/Shrikhand-Regular.otf") format("truetype");
+}
+a {
+  text-decoration: unset;
+  color: unset;
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto-Bold", sans-serif;
+}
+
+.header {
+  box-shadow: rgba(0, 0, 0, 0.089) 0px 5px 5px;
+}
+.header__img {
+  text-align: center;
+  height: 65px;
+}
+.header__img img {
+  width: 10em;
+  padding-top: 20px;
+}
+
+.localisation {
+  display: flex;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.072);
+  justify-content: center;
+}
+.localisation__logo {
+  margin: auto;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.795);
+}
+.localisation__txt {
+  margin: auto;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.795);
+}
+
+.intro {
+  height: 290px;
+  background: rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+.intro__titre {
+  margin: auto;
+  margin-top: 0;
+  padding-top: 34px;
+  font-size: 1.55em;
+  width: 79%;
+}
+.intro__txt {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+  margin: auto;
+  margin-top: 0.6em;
+  width: 85%;
+  margin-bottom: 2em;
+}
+.intro__btn {
+  background: #9356DC;
+  color: white;
+  padding: 1em 0;
+  width: 220px;
+  margin: auto;
+  border-radius: 3em;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.349);
+  text-shadow: 1px 1px 2px #7d34d5;
+}
+
+.fonctionnement {
+  height: 370px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.fonctionnement--margin {
+  margin: auto;
+  margin-left: 0.5em;
+  margin-right: 0;
+}
+.fonctionnement__titre {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.fonctionnement__regle {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.03);
+  height: 75px;
+  margin-bottom: 20px;
+  display: flex;
+  border-radius: 1.5em;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.192);
+}
+.fonctionnement__regle__nombre {
+  border-radius: 1em;
+  padding: 2px 7px;
+  position: relative;
+  left: -18px;
+  background: #9356DC;
+  color: white;
+  font-size: 0.9em;
+}
+.fonctionnement__regle__i {
+  font-size: 1.3em;
+  margin-right: 1em;
+  color: rgba(0, 0, 0, 0.466);
+}
+.fonctionnement__regle__i--primaire {
+  color: #9356DC;
+  font-size: 1.1em;
+}
+.fonctionnement__regle__txt {
+  font-size: 1em;
+}
+
+.restaurant {
+  height: 1225px;
+  background: rgba(0, 0, 0, 0.03);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.restaurant__titre {
+  padding-top: 55px;
+}
+.restaurant__preview {
+  height: 250px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 1.2em;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
+}
+.restaurant__preview__img {
+  width: 100%;
+  height: 70%;
+  border-radius: 1.2em 1.2em 0 0;
+}
+.restaurant__preview__new {
+  background: #99E2D0;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 85px;
+  font-size: 0.9em;
+  color: #278870;
+  border-radius: 3px;
+  position: relative;
+  left: 16.5em;
+  bottom: 14.5em;
+}
+.restaurant__preview__nom {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 10px;
+  width: 75%;
+  float: left;
+}
+.restaurant__preview__i {
+  font-size: 1.5em;
+  margin-top: 19px;
+  margin-left: 30px;
+}
+.restaurant__preview__txt {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  margin-left: 15px;
+  width: 75%;
+  float: left;
+  margin-top: 3px;
+}
+
+.footer {
+  height: 200px;
+  background: rgba(0, 0, 0, 0.822);
+  color: white;
+  padding-left: 25px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__titre {
+  font-family: "Shrikhand";
+}
+.footer__lien {
+  margin-bottom: 8px;
+}
+.footer__lien__i {
+  width: 1.9em;
+}
+
+/*# sourceMappingURL=style.css.map */
