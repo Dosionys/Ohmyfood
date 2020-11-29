@@ -26,11 +26,20 @@ body {
     font-family: 'Roboto-Bold', sans-serif;
 }
 
+//page "index"!
+
 .header {
     box-shadow: rgba(0, 0, 0, 0.089) 0px 5px 5px;
     &__img {
         text-align: center;
         height: 65px;
+        &__i {
+            position: absolute;
+            left: 1.1em;
+            top: 1.3em;
+            font-size: 1.3em;
+            color: rgba(0, 0, 0, 0.767);
+        }
     }
     &__img img {
         width: 10em;
@@ -158,7 +167,7 @@ body {
             color: darken($couleur-tertiaire, 40%);
             border-radius: 3px;
             position: relative;
-            left: 16.5em;
+            right: -16.5em;
             bottom: 14.5em;
         }
         &__nom {
@@ -200,5 +209,85 @@ body {
         &__i {
             width: 1.9em;
         }
+    }
+}
+
+//page restaurant!
+
+.imageintro img {
+    width: 100%;
+}
+
+.menu {
+    border-radius: 2em 2em 0 0;
+    position: relative;
+    bottom: 2.1em;
+    background: rgb(240, 240, 240);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 1em;
+    padding-bottom: 5em;
+    margin-bottom: 0;
+    &--modif {
+        bottom: 16em;
+    }
+    &__nom {
+        font-family: 'Shrikhand';
+        font-size: 1.7em;
+        float: left;
+        width: 10em;
+    }
+    &__i {
+        font-size: 1.5em;
+        margin-top: 0.8em;
+        margin-left: 25px;
+    }
+    &__titre {
+        font-family: 'Roboto';
+        font-size: 1em;
+        margin-top: 2.4em;
+        margin-bottom: 5px;
+    }
+    &__sousligne {
+        border: solid 2px $couleur-tertiaire;
+        width: 40px;
+    }
+    &__proposition {
+        background: white;
+        padding: 10px;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        border-radius: 1em;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
+        &__plat {
+            font-size: 1.15em;
+            margin: 0;
+        }
+        &__precision {
+            font-family: 'Roboto';
+            font-size: 0.95em;
+            margin: 0;
+            margin-top: 5px;
+            float: left;
+            word-wrap: break-word;
+            width: 89%;
+        }
+        &__prix {
+            margin: 0;
+            font-size: 0.95em;
+            padding-top: 6px;
+        }
+    }
+    &__btn {
+        margin: auto;
+        width: 185px;
+        text-align: center;
+        background-color: $couleur-primaire;
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-radius: 3em;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
+        margin-top: 3em;
     }
 }
