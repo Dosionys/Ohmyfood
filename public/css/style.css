@@ -219,22 +219,22 @@ body {
   border-radius: 1.2em 1.2em 0 0;
 }
 .restaurant__conteneur__preview__img--1 {
-  background: url("/public/img/palette.jpg");
+  background: url("../img/palette.jpg");
   background-position: center;
   background-size: cover;
 }
 .restaurant__conteneur__preview__img--2 {
-  background: url("/public/img/note.jpg");
+  background: url("../img/note.jpg");
   background-position: center;
   background-size: cover;
 }
 .restaurant__conteneur__preview__img--3 {
-  background: url("/public/img/francaise.jpg");
+  background: url("../img/francaise.jpg");
   background-position: center;
   background-size: cover;
 }
 .restaurant__conteneur__preview__img--4 {
-  background: url("/public/img/delice.jpg");
+  background: url("../img/delice.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -297,22 +297,22 @@ body {
   height: 260px;
 }
 .imageintro--1 {
-  background: url("/public/img/palette.jpg");
+  background: url("../img/palette.jpg");
   background-position: center;
   background-size: cover;
 }
 .imageintro--2 {
-  background: url("/public/img/note.jpg");
+  background: url("../img/note.jpg");
   background-position: center;
   background-size: cover;
 }
 .imageintro--3 {
-  background: url("/public/img/francaise.jpg");
+  background: url("../img/francaise.jpg");
   background-position: center;
   background-size: cover;
 }
 .imageintro--4 {
-  background: url("/public/img/delice.jpg");
+  background: url("../img/delice.jpg");
   background-position: center;
   background-size: cover;
 }
