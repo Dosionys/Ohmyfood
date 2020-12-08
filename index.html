@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-
+        <div class="bloc_page">
         <header class="header">
             <div class="header__img">
                 <img src="public/img/ohmyfood.png" alt="logo ohmyfood" />
@@ -47,41 +47,44 @@
 
         <div class="restaurant">
             <h2 class="restaurant__titre">Restaurants</h2>
-            <a href="lapalettedugout.html" class="restaurant__preview">
-                <img src="public/img/palette.jpg" alt="Restaurant la palette du gout" class="restaurant__preview__img" />
-                <h3 class="restaurant__preview__nom">La palette du goût</h3>
-                <p class="restaurant__preview__txt">Ménilmontant</p>
-                <i class="far fa-heart restaurant__preview__i"></i>
-                <div class="restaurant__preview__new">Nouveau</div>
-            </a>
-            <a href="lanoteenchantee.html" class="restaurant__preview">
-                <img src="public/img/note.jpg" alt="Restaurant la note enchantee" class="restaurant__preview__img" />
-                <h3 class="restaurant__preview__nom">La note enchantée</h3>
-                <p class="restaurant__preview__txt">Charonne</p>
-                <i class="far fa-heart restaurant__preview__i"></i>
-                <div class="restaurant__preview__new">Nouveau</div>
-            </a>
-            <a href="alafrancaise.html" class="restaurant__preview">
-                <img src="public/img/francaise.jpg" alt="Restaurant a la francaise" class="restaurant__preview__img" />
-                <h3 class="restaurant__preview__nom">À la française</h3>
-                <p class="restaurant__preview__txt">Cité Rouge</p>
-                <i class="far fa-heart restaurant__preview__i"></i>
-            </a>
-            <a href="ledelicedessens.html" class="restaurant__preview">
-                <img src="public/img/delice.jpg" alt="Restaurant le delice des sens" class="restaurant__preview__img" />
-                <h3 class="restaurant__preview__nom">Le délice des sens</h3>
-                <p class="restaurant__preview__txt">Folie-Méricourt</p>
-                <i class="far fa-heart restaurant__preview__i"></i>
-            </a>
+            <div class="restaurant__conteneur">
+                <a href="lapalettedugout.html" class="restaurant__conteneur__preview">
+                    <div class="restaurant__conteneur__preview__img restaurant__conteneur__preview__img--1"></div>
+                    <h3 class="restaurant__conteneur__preview__nom">La palette du goût</h3>
+                    <p class="restaurant__conteneur__preview__txt">Ménilmontant</p>
+                    <i class="far fa-heart restaurant__conteneur__preview__i"></i>
+                    <div class="restaurant__conteneur__preview__new">Nouveau</div>
+                </a>
+                <a href="lanoteenchantee.html" class="restaurant__conteneur__preview">
+                    <div class="restaurant__conteneur__preview__img restaurant__conteneur__preview__img--2"></div>
+                    <h3 class="restaurant__conteneur__preview__nom">La note enchantée</h3>
+                    <p class="restaurant__conteneur__preview__txt">Charonne</p>
+                    <i class="far fa-heart restaurant__conteneur__preview__i"></i>
+                    <div class="restaurant__conteneur__preview__new">Nouveau</div>
+                </a>
+                <a href="alafrancaise.html" class="restaurant__conteneur__preview">
+                    <div class="restaurant__conteneur__preview__img restaurant__conteneur__preview__img--3"></div>
+                    <h3 class="restaurant__conteneur__preview__nom">À la française</h3>
+                    <p class="restaurant__conteneur__preview__txt">Cité Rouge</p>
+                    <i class="far fa-heart restaurant__conteneur__preview__i"></i>
+                </a>
+                <a href="ledelicedessens.html" class="restaurant__conteneur__preview">
+                    <div class="restaurant__conteneur__preview__img restaurant__conteneur__preview__img--4"></div>
+                    <h3 class="restaurant__conteneur__preview__nom">Le délice des sens</h3>
+                    <p class="restaurant__conteneur__preview__txt">Folie-Méricourt</p>
+                    <i class="far fa-heart restaurant__conteneur__preview__i"></i>
+                </a>
+            </div>
         </div>
-
+        </div>
         <footer class="footer">
-            <h3 class="footer__titre">ohmyfood</h3>
-            <a href="#" class="footer__lien"><i class="fas fa-utensils footer__lien__i"></i>Proposer un restaurant</a>
-            <a href="#" class="footer__lien"><i class="fas fa-hands-helping footer__lien__i"></i>Devenir partenaire</a>
-            <a href="#" class="footer__lien">Mentions légales</a>
-            <a href="#" class="footer__lien">Contact</a>
+            <div class="footer__conteneur">
+                <h3 class="footer__titre">ohmyfood</h3>
+                <a href="#" class="footer__lien"><i class="fas fa-utensils footer__lien__i"></i>Proposer un restaurant</a>
+                <a href="#" class="footer__lien"><i class="fas fa-hands-helping footer__lien__i"></i>Devenir partenaire</a>
+                <a href="#" class="footer__lien">Mentions légales</a>
+                <a href="#" class="footer__lien">Contact</a>
+            </div>
         </footer>
-
     </body>
 </html>

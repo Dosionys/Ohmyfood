@@ -21,6 +21,13 @@ body {
   font-family: "Roboto-Bold", sans-serif;
 }
 
+.bloc_page {
+  max-width: 1455px;
+  margin: auto;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.178);
+  position: relative;
+}
+
 .header {
   box-shadow: rgba(0, 0, 0, 0.089) 0px 5px 5px;
 }
@@ -78,20 +85,26 @@ body {
   margin-bottom: 2em;
 }
 .intro__btn {
-  background: #9356DC;
+  background: #9356dc;
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
   color: white;
   padding: 1em 0;
   width: 220px;
   margin: auto;
   border-radius: 3em;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.349);
-  text-shadow: 1px 1px 2px #7d34d5;
 }
 
 .fonctionnement {
   height: 370px;
   padding-left: 20px;
   padding-right: 20px;
+}
+@media screen and (min-width: 1000px) {
+  .fonctionnement {
+    display: flex;
+    height: 220px;
+  }
 }
 .fonctionnement--margin {
   margin: auto;
@@ -102,6 +115,12 @@ body {
   margin-top: 50px;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 1000px) {
+  .fonctionnement__titre {
+    position: absolute;
+    margin-left: 1em;
+  }
+}
 .fonctionnement__regle {
   width: 100%;
   background: rgba(0, 0, 0, 0.03);
@@ -110,6 +129,20 @@ body {
   display: flex;
   border-radius: 1.5em;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.192);
+}
+@media screen and (min-width: 550px) {
+  .fonctionnement__regle {
+    margin: auto;
+    width: 32em;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .fonctionnement__regle {
+    margin: auto;
+    width: 18em;
+    margin-top: 120px;
+  }
 }
 .fonctionnement__regle__nombre {
   border-radius: 1em;
@@ -134,67 +167,121 @@ body {
 }
 
 .restaurant {
-  height: 1225px;
   background: rgba(0, 0, 0, 0.03);
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1000px) {
+  .restaurant {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }
 .restaurant__titre {
   padding-top: 55px;
 }
-.restaurant__preview {
-  height: 250px;
+@media screen and (min-width: 1000px) {
+  .restaurant__titre {
+    margin-left: 1em;
+  }
+}
+@media screen and (min-width: 550px) {
+  .restaurant__conteneur {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.restaurant__conteneur__preview {
   margin-bottom: 15px;
+  padding-bottom: 15px;
   background: white;
   border-radius: 1.2em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
+  position: relative;
 }
-.restaurant__preview__img {
+@media screen and (min-width: 550px) {
+  .restaurant__conteneur__preview {
+    width: 45%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .restaurant__conteneur__preview {
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+}
+.restaurant__conteneur__preview__img {
   width: 100%;
-  height: 70%;
+  height: 175px;
   border-radius: 1.2em 1.2em 0 0;
 }
-.restaurant__preview__new {
+.restaurant__conteneur__preview__img--1 {
+  background: url("/public/img/palette.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.restaurant__conteneur__preview__img--2 {
+  background: url("/public/img/note.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.restaurant__conteneur__preview__img--3 {
+  background: url("/public/img/francaise.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.restaurant__conteneur__preview__img--4 {
+  background: url("/public/img/delice.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.restaurant__conteneur__preview__new {
   background: #99E2D0;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
+  padding-top: 6px;
   width: 85px;
   font-size: 0.9em;
   color: #278870;
   border-radius: 3px;
-  position: relative;
-  right: -16.5em;
-  bottom: 14.5em;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
-.restaurant__preview__nom {
+.restaurant__conteneur__preview__nom {
   margin: 0;
   margin-left: 15px;
   margin-top: 10px;
-  width: 75%;
-  float: left;
 }
-.restaurant__preview__i {
-  font-size: 1.5em;
-  margin-top: 19px;
-  margin-left: 30px;
+.restaurant__conteneur__preview__i {
+  font-size: 1.4em;
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
 }
-.restaurant__preview__txt {
+.restaurant__conteneur__preview__txt {
   margin: 0;
   font-family: "Roboto", sans-serif;
   margin-left: 15px;
-  width: 75%;
-  float: left;
   margin-top: 3px;
 }
 
 .footer {
   height: 200px;
-  background: rgba(0, 0, 0, 0.822);
+  background: #333333;
   color: white;
   padding-left: 25px;
   padding-top: 5px;
   display: flex;
   flex-direction: column;
+}
+.footer__conteneur {
+  max-width: 1455px;
+  margin: auto;
+  width: 100%;
 }
 .footer__titre {
   font-family: "Shrikhand";
@@ -206,34 +293,70 @@ body {
   width: 1.9em;
 }
 
-.imageintro img {
-  width: 100%;
+.imageintro {
+  height: 260px;
+}
+.imageintro--1 {
+  background: url("/public/img/palette.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.imageintro--2 {
+  background: url("/public/img/note.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.imageintro--3 {
+  background: url("/public/img/francaise.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.imageintro--4 {
+  background: url("/public/img/delice.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .menu {
   border-radius: 2em 2em 0 0;
-  position: relative;
-  bottom: 2.1em;
   background: #f0f0f0;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 1em;
   padding-bottom: 5em;
-  margin-bottom: 0;
-}
-.menu--modif {
-  bottom: 16em;
+  position: relative;
+  bottom: 40px;
+  margin-bottom: -40px;
 }
 .menu__nom {
   font-family: "Shrikhand";
   font-size: 1.7em;
-  float: left;
   width: 10em;
+}
+@media screen and (min-width: 550px) {
+  .menu__nom {
+    margin: auto;
+    margin-top: 1em;
+  }
+}
+@media screen and (max-width: 355px) {
+  .menu__nom {
+    font-size: 1.35em;
+  }
 }
 .menu__i {
   font-size: 1.5em;
   margin-top: 0.8em;
   margin-left: 25px;
+  position: absolute;
+  top: 0.6em;
+  right: 2em;
+}
+@media screen and (max-width: 355px) {
+  .menu__i {
+    top: 1.5em;
+    right: 1em;
+  }
 }
 .menu__titre {
   font-family: "Roboto";
@@ -241,9 +364,20 @@ body {
   margin-top: 2.4em;
   margin-bottom: 5px;
 }
+@media screen and (min-width: 550px) {
+  .menu__titre {
+    text-align: center;
+  }
+}
 .menu__sousligne {
   border: solid 2px #99E2D0;
   width: 40px;
+}
+@media screen and (min-width: 550px) {
+  .menu__sousligne {
+    margin: auto;
+    width: 100px;
+  }
 }
 .menu__proposition {
   background: white;
@@ -252,6 +386,15 @@ body {
   margin-top: 1em;
   border-radius: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
+  position: relative;
+}
+@media screen and (min-width: 550px) {
+  .menu__proposition {
+    margin: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 60%;
+  }
 }
 .menu__proposition__plat {
   font-size: 1.15em;
@@ -262,20 +405,23 @@ body {
   font-size: 0.95em;
   margin: 0;
   margin-top: 5px;
-  float: left;
   word-wrap: break-word;
-  width: 89%;
+  width: 86%;
 }
 .menu__proposition__prix {
   margin: 0;
   font-size: 0.95em;
   padding-top: 6px;
+  position: absolute;
+  right: 18px;
+  bottom: 13px;
 }
 .menu__btn {
   margin: auto;
   width: 185px;
   text-align: center;
-  background-color: #9356DC;
+  background: #9356dc;
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
   color: white;
   padding-top: 15px;
   padding-bottom: 15px;

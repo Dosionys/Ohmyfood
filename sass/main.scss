@@ -15,6 +15,24 @@ $couleur-primaire: #9356DC;
 $couleur-secondaire: #FF79DA;
 $couleur-tertiaire: #99E2D0;
 
+@mixin responsive1 {
+    @media screen and (min-width: 550px){
+        @content;
+    }  
+}
+
+@mixin responsive2 {
+    @media screen and (min-width: 1000px){
+        @content;
+    }  
+}
+
+@mixin responsive3 {
+    @media screen and (max-width: 355px){
+        @content;
+    }
+}
+
 a {
     text-decoration: unset;
     color: unset;
@@ -27,6 +45,13 @@ body {
 }
 
 //page "index"!
+
+.bloc_page {
+    max-width: 1455px;
+    margin: auto;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.178);
+    position: relative;
+}
 
 .header {
     box-shadow: rgba(0, 0, 0, 0.089) 0px 5px 5px;
@@ -84,20 +109,24 @@ body {
         margin-bottom: 2em;
     }
     &__btn {
-        background: $couleur-primaire;
+        background: rgb(147,86,220);
+        background: linear-gradient(347deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
         color: white;
         padding: 1em 0;
         width: 220px;
         margin: auto;
         border-radius: 3em;
         box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.349);
-        text-shadow: 1px 1px 2px darken($couleur-primaire, 8%);
     }
 }
 .fonctionnement {
     height: 370px;
     padding-left: 20px;
     padding-right: 20px;
+    @include responsive2(){
+        display: flex;
+        height: 220px;
+    }
     &--margin{
         margin: auto;
         margin-left: 0.5em;
@@ -106,6 +135,10 @@ body {
     &__titre {
         margin-top: 50px;
         margin-bottom: 40px;
+        @include responsive2(){
+            position: absolute;
+            margin-left: 1em;
+        }
     }
     &__regle {
         width: 100%;
@@ -115,6 +148,16 @@ body {
         display: flex;
         border-radius: 1.5em;
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.192);
+        @include responsive1(){
+            margin: auto;
+            width: 32em;
+            margin-bottom: 20px;
+        }
+        @include responsive2(){
+            margin: auto;
+            width: 18em;
+            margin-top: 120px;
+        }
         &__nombre {
             border-radius: 1em;
             padding: 2px 7px;
@@ -140,67 +183,113 @@ body {
 }
 
 .restaurant {
-    height: 1225px;
     background: rgba(0, 0, 0, 0.030);
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 50px;
+    @include responsive2(){
+        padding-left: 2em;
+        padding-right: 2em;
+    }
     &__titre {
         padding-top: 55px;
+        @include responsive2(){
+            margin-left: 1em;
+        }
     }
-    &__preview {
-        height: 250px;
-        margin-bottom: 15px;
-        background: white;
-        border-radius: 1.2em;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
-        &__img {
-            width: 100%;
-            height: 70%;
-            border-radius: 1.2em 1.2em 0 0;
+    &__conteneur {
+        @include responsive1(){
+            display: flex;
+            flex-wrap: wrap;
         }
-        &__new {
-            background: $couleur-tertiaire;
-            text-align: center;
-            padding-bottom: 10px;
-            width:85px;
-            font-size: .9em;
-            color: darken($couleur-tertiaire, 40%);
-            border-radius: 3px;
+        &__preview {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            background: white;
+            border-radius: 1.2em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.295);
             position: relative;
-            right: -16.5em;
-            bottom: 14.5em;
-        }
-        &__nom {
-            margin: 0;
-            margin-left: 15px;
-            margin-top: 10px;
-            width: 75%;
-            float: left;
-        }
-        &__i {
-            font-size: 1.5em;
-            margin-top: 19px;
-            margin-left: 30px;
-        }
-        &__txt {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            margin-left: 15px;
-            width: 75%;
-            float: left;
-            margin-top: 3px;
+            @include responsive1(){
+                width: 45%;
+                margin: auto;
+                margin-bottom: 30px;
+            }
+            @include responsive2(){
+                margin-bottom: 2em;
+                margin-top: 2em;
+            }
+            &__img {
+                width: 100%;
+                height: 175px;
+                border-radius: 1.2em 1.2em 0 0;
+                &--1 {
+                    background: url('/public/img/palette.jpg');
+                    background-position: center;
+                    background-size: cover;
+                }
+                &--2 {
+                    background: url('/public/img/note.jpg');
+                    background-position: center;
+                    background-size: cover;
+                }
+                &--3 {
+                    background: url('/public/img/francaise.jpg');
+                    background-position: center;
+                    background-size: cover;
+                }
+                &--4 {
+                    background: url('/public/img/delice.jpg');
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+            &__new {
+                background: $couleur-tertiaire;
+                text-align: center;
+                padding-bottom: 6px;
+                padding-top: 6px;
+                width: 85px;
+                font-size: .9em;
+                color: darken($couleur-tertiaire, 40%);
+                border-radius: 3px;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+            }
+            &__nom {
+                margin: 0;
+                margin-left: 15px;
+                margin-top: 10px;
+            }
+            &__i {
+                font-size: 1.4em;
+                position: absolute;
+                right: 25px;
+                bottom: 30px;
+            }
+            &__txt {
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                margin-left: 15px;
+                margin-top: 3px;
+            }
         }
     }
 }
 
 .footer {
     height: 200px;
-    background: rgba(0, 0, 0, 0.822);
+    background: rgb(51, 51, 51);
     color: white;
     padding-left: 25px;
     padding-top: 5px;
     display: flex;
     flex-direction: column;
+    &__conteneur {
+        max-width: 1455px;
+        margin: auto;
+        width: 100%;
+    }
     &__titre {
         font-family: 'Shrikhand';
     }
@@ -214,43 +303,80 @@ body {
 
 //page restaurant!
 
-.imageintro img {
-    width: 100%;
+.imageintro{
+    height: 260px;
+    &--1 {
+        background: url('/public/img/palette.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    &--2 {
+        background: url('/public/img/note.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    &--3 {
+        background: url('/public/img/francaise.jpg');
+        background-position: center;
+        background-size: cover;
+    }
+    &--4 {
+        background: url('/public/img/delice.jpg');
+        background-position: center;
+        background-size: cover;
+    }
 }
 
 .menu {
     border-radius: 2em 2em 0 0;
-    position: relative;
-    bottom: 2.1em;
     background: rgb(240, 240, 240);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 1em;
     padding-bottom: 5em;
-    margin-bottom: 0;
-    &--modif {
-        bottom: 16em;
-    }
+    position: relative;
+    bottom: 40px;
+    margin-bottom: -40px;
     &__nom {
         font-family: 'Shrikhand';
         font-size: 1.7em;
-        float: left;
         width: 10em;
+        @include responsive1(){
+            margin: auto;
+            margin-top: 1em;
+        }
+        @include responsive3(){
+            font-size: 1.35em;
+        }
     }
     &__i {
         font-size: 1.5em;
         margin-top: 0.8em;
         margin-left: 25px;
+        position: absolute;
+        top: 0.6em;
+        right: 2em;
+        @include responsive3(){
+            top: 1.5em;
+            right: 1em;
+        }
     }
     &__titre {
         font-family: 'Roboto';
         font-size: 1em;
         margin-top: 2.4em;
         margin-bottom: 5px;
+        @include responsive1() {
+            text-align: center;
+        }
     }
     &__sousligne {
         border: solid 2px $couleur-tertiaire;
         width: 40px;
+        @include responsive1(){
+            margin: auto;
+            width: 100px;
+        }
     }
     &__proposition {
         background: white;
@@ -259,6 +385,13 @@ body {
         margin-top: 1em;
         border-radius: 1em;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
+        position: relative;
+        @include responsive1(){
+            margin: auto;
+            margin-bottom: 1em;
+            margin-top: 1em;
+            width: 60%;
+        }
         &__plat {
             font-size: 1.15em;
             margin: 0;
@@ -268,21 +401,24 @@ body {
             font-size: 0.95em;
             margin: 0;
             margin-top: 5px;
-            float: left;
             word-wrap: break-word;
-            width: 89%;
+            width: 86%;
         }
         &__prix {
             margin: 0;
             font-size: 0.95em;
             padding-top: 6px;
+            position: absolute;
+            right: 18px;
+            bottom: 13px;
         }
     }
     &__btn {
         margin: auto;
         width: 185px;
         text-align: center;
-        background-color: $couleur-primaire;
+        background: rgb(147,86,220);
+        background: linear-gradient(347deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
         color: white;
         padding-top: 15px;
         padding-bottom: 15px;
