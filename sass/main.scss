@@ -401,6 +401,8 @@ body {
         &__plat {
             font-size: 1.15em;
             margin: 0;
+            width: 100%;
+            transition: width ease-in-out 450ms 150ms;
         }
         &__precision {
             font-family: 'Roboto';
@@ -410,10 +412,6 @@ body {
             word-wrap: break-word;
             width: 87%;
             transition: width ease-in-out 450ms 150ms;
-            border: 1px solid;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
         }
         &__prix {
             margin: 0;
@@ -421,8 +419,8 @@ body {
             padding-top: 6px;
             position: absolute;
             right: 18px;
-            bottom: 13px;
-            transition: transform 450ms ease-in-out 150ms;
+            bottom: 10px;
+            transition: right 450ms ease-in-out 150ms;
         }
         &__animation{
             position: absolute;
@@ -433,10 +431,10 @@ body {
             text-align: center;
             width: 20%;
             right: -20%;
+            padding-top: 0.7em;
             font-size: 1.7em;
             transition: transform 500ms ease-in-out 100ms;
             &__valide{
-                margin-top: 25%;
                 transition: transform 500ms ease-in-out 100ms;
             }
         }
@@ -448,10 +446,19 @@ body {
                 }
             }
             &__prix{
-                transform: translateX(-250%);
+                right: 25%;
             }
             &__precision{
                 width: 68%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            &__plat{
+                width: 75%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
             }
         }
     }
