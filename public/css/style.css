@@ -85,7 +85,6 @@ body {
   margin-bottom: 2em;
 }
 .intro__btn {
-  background: #9356dc;
   background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
   color: white;
   padding: 1em 0;
@@ -93,6 +92,11 @@ body {
   margin: auto;
   border-radius: 3em;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.349);
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.intro__btn:hover {
+  transform: scale(1.1);
 }
 
 .fonctionnement {
@@ -277,6 +281,7 @@ body {
   padding-top: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .footer__conteneur {
   max-width: 1455px;
@@ -387,6 +392,7 @@ body {
   border-radius: 1em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
   position: relative;
+  overflow: hidden;
 }
 @media screen and (min-width: 550px) {
   .menu__proposition {
@@ -406,7 +412,12 @@ body {
   margin: 0;
   margin-top: 5px;
   word-wrap: break-word;
-  width: 86%;
+  width: 87%;
+  transition: width ease-in-out 450ms 150ms;
+  border: 1px solid;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__proposition__prix {
   margin: 0;
@@ -415,12 +426,40 @@ body {
   position: absolute;
   right: 18px;
   bottom: 13px;
+  transition: transform 450ms ease-in-out 150ms;
+}
+.menu__proposition__animation {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #99E2D0;
+  color: white;
+  text-align: center;
+  width: 20%;
+  right: -20%;
+  font-size: 1.7em;
+  transition: transform 500ms ease-in-out 100ms;
+}
+.menu__proposition__animation__valide {
+  margin-top: 25%;
+  transition: transform 500ms ease-in-out 100ms;
+}
+.menu__proposition:hover > .menu__proposition__animation {
+  transform: translateX(-100%);
+}
+.menu__proposition:hover > .menu__proposition__animation > .menu__proposition__animation__valide {
+  transform: rotate(1turn);
+}
+.menu__proposition:hover > .menu__proposition__prix {
+  transform: translateX(-250%);
+}
+.menu__proposition:hover > .menu__proposition__precision {
+  width: 68%;
 }
 .menu__btn {
   margin: auto;
   width: 185px;
   text-align: center;
-  background: #9356dc;
   background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
   color: white;
   padding-top: 15px;
@@ -428,6 +467,11 @@ body {
   border-radius: 3em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
   margin-top: 3em;
+  transform: scale(1);
+  transition: transform 200ms;
+}
+.menu__btn:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */
