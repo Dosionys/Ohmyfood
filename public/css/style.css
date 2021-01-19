@@ -10,6 +10,18 @@
   font-family: "Shrikhand";
   src: url("../police/Shrikhand-Regular.otf") format("truetype");
 }
+@keyframes anim-menu {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 a {
   text-decoration: unset;
   color: unset;
@@ -393,6 +405,18 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
   position: relative;
   overflow: hidden;
+}
+.menu__proposition--1 {
+  animation: anim-menu 1300ms 200ms both;
+}
+.menu__proposition--2 {
+  animation: anim-menu 1300ms 400ms both;
+}
+.menu__proposition--3 {
+  animation: anim-menu 1300ms 600ms both;
+}
+.menu__proposition--4 {
+  animation: anim-menu 1300ms 800ms both;
 }
 @media screen and (min-width: 550px) {
   .menu__proposition {

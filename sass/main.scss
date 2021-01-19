@@ -33,6 +33,12 @@ $couleur-tertiaire: #99E2D0;
     }
 }
 
+@keyframes anim-menu{
+    0%{transform: translateY(20px); opacity: 0;}
+    70%, 100%{opacity: 1;}
+    100%{transform: translateY(0);}
+}
+
 a {
     text-decoration: unset;
     color: unset;
@@ -392,6 +398,10 @@ body {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
         position: relative;
         overflow: hidden;
+        &--1{animation: anim-menu 1300ms 200ms both;}
+        &--2{animation: anim-menu 1300ms 400ms both;}
+        &--3{animation: anim-menu 1300ms 600ms both;}
+        &--4{animation: anim-menu 1300ms 800ms both;}
         @include responsive1(){
             margin: auto;
             margin-bottom: 1em;
