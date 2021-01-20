@@ -22,10 +22,148 @@
     transform: translateY(0);
   }
 }
+@keyframes body {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fonctionnement {
+  0% {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  80% {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  100% {
+    background: #eadef8;
+  }
+}
+@keyframes icone {
+  0% {
+    color: rgba(0, 0, 0, 0.466);
+  }
+  80% {
+    color: rgba(0, 0, 0, 0.466);
+  }
+  100% {
+    color: #9356DC;
+  }
+}
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
 a {
   text-decoration: unset;
   color: unset;
   display: block;
+}
+
+.lds-default {
+  z-index: -1;
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  top: 40%;
+  left: 40%;
+}
+@media screen and (min-width: 550px) {
+  .lds-default {
+    left: 45%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .lds-default {
+    left: 48%;
+  }
+}
+
+.lds-default div {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #9356DC;
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite;
+}
+
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 37px;
+  left: 66px;
+}
+
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 22px;
+  left: 62px;
+}
+
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 11px;
+  left: 52px;
+}
+
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 7px;
+  left: 37px;
+}
+
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 11px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 22px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 37px;
+  left: 7px;
+}
+
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 52px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 62px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 66px;
+  left: 37px;
+}
+
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 62px;
+  left: 52px;
+}
+
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 52px;
+  left: 62px;
 }
 
 body {
@@ -38,6 +176,8 @@ body {
   margin: auto;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.178);
   position: relative;
+  animation: body 200ms 500ms both;
+  background: white;
 }
 
 .header {
@@ -80,6 +220,7 @@ body {
   height: 290px;
   background: rgba(0, 0, 0, 0.03);
   text-align: center;
+  position: relative;
 }
 .intro__titre {
   margin: auto;
@@ -104,17 +245,18 @@ body {
   margin: auto;
   border-radius: 3em;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.349);
-  transform: scale(1);
-  transition: transform 200ms;
+  transition: box-shadow 500ms;
 }
 .intro__btn:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.705);
+  background: linear-gradient(347deg, rgba(146, 86, 220, 0.901) 0%, rgba(255, 121, 217, 0.901) 100%);
 }
 
 .fonctionnement {
   height: 370px;
   padding-left: 20px;
   padding-right: 20px;
+  background: white;
 }
 @media screen and (min-width: 1000px) {
   .fonctionnement {
@@ -146,6 +288,15 @@ body {
   border-radius: 1.5em;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.192);
 }
+.fonctionnement__regle--1 {
+  animation: fonctionnement 4000ms 0ms infinite;
+}
+.fonctionnement__regle--2 {
+  animation: fonctionnement 4000ms 700ms infinite;
+}
+.fonctionnement__regle--3 {
+  animation: fonctionnement 4000ms 1400ms infinite;
+}
 @media screen and (min-width: 550px) {
   .fonctionnement__regle {
     margin: auto;
@@ -174,16 +325,21 @@ body {
   margin-right: 1em;
   color: rgba(0, 0, 0, 0.466);
 }
-.fonctionnement__regle__i--primaire {
-  color: #9356DC;
-  font-size: 1.1em;
+.fonctionnement__regle__i--1 {
+  animation: icone 4000ms 0ms infinite;
+}
+.fonctionnement__regle__i--2 {
+  animation: icone 4000ms 700ms infinite;
+}
+.fonctionnement__regle__i--3 {
+  animation: icone 4000ms 1400ms infinite;
 }
 .fonctionnement__regle__txt {
   font-size: 1em;
 }
 
 .restaurant {
-  background: rgba(0, 0, 0, 0.03);
+  background: #f3f3f3;
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 50px;
@@ -277,6 +433,26 @@ body {
   position: absolute;
   right: 25px;
   bottom: 30px;
+  z-index: 1;
+}
+.restaurant__conteneur__preview__i:hover {
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant__conteneur__preview__i:hover + .restaurant__conteneur__preview__i--plein {
+  opacity: 1;
+}
+.restaurant__conteneur__preview__i--plein {
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.38em;
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 .restaurant__conteneur__preview__txt {
   margin: 0;
@@ -286,7 +462,7 @@ body {
 }
 
 .footer {
-  height: 200px;
+  height: 190px;
   background: #333333;
   color: white;
   padding-left: 25px;
@@ -294,6 +470,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.171);
 }
 .footer__conteneur {
   max-width: 1455px;
@@ -368,12 +545,29 @@ body {
   position: absolute;
   top: 0.6em;
   right: 2em;
+  z-index: 1;
 }
 @media screen and (max-width: 355px) {
   .menu__i {
     top: 1.5em;
     right: 1em;
   }
+}
+.menu__i:hover {
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__i:hover + .menu__i--plein {
+  opacity: 1;
+}
+.menu__i--plein {
+  background: linear-gradient(347deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 .menu__titre {
   font-family: "Roboto";
@@ -407,16 +601,16 @@ body {
   overflow: hidden;
 }
 .menu__proposition--1 {
-  animation: anim-menu 1300ms 200ms both;
+  animation: anim-menu 1300ms 900ms both;
 }
 .menu__proposition--2 {
-  animation: anim-menu 1300ms 400ms both;
+  animation: anim-menu 1300ms 1100ms both;
 }
 .menu__proposition--3 {
-  animation: anim-menu 1300ms 600ms both;
+  animation: anim-menu 1300ms 1300ms both;
 }
 .menu__proposition--4 {
-  animation: anim-menu 1300ms 800ms both;
+  animation: anim-menu 1300ms 1500ms both;
 }
 @media screen and (min-width: 550px) {
   .menu__proposition {
@@ -498,11 +692,11 @@ body {
   border-radius: 3em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
   margin-top: 3em;
-  transform: scale(1);
-  transition: transform 200ms;
+  transition: box-shadow 500ms;
 }
 .menu__btn:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.705);
+  background: linear-gradient(347deg, rgba(146, 86, 220, 0.901) 0%, rgba(255, 121, 217, 0.901) 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
