@@ -577,13 +577,18 @@ body {
             margin: 0;
             width: 100%;
             transition: width ease-in-out 450ms 150ms;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         &__precision {
             font-family: 'Roboto';
             font-size: 0.95em;
             margin: 0;
             margin-top: 5px;
-            word-wrap: break-word;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
             width: 87%;
             transition: width ease-in-out 450ms 150ms;
         }
@@ -623,13 +628,10 @@ body {
                 right: 25%;
             }
             &__precision{
-                width: 68%;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                overflow: hidden;
+                width: 62%;
             }
             &__plat{
-                width: 75%;
+                width: 70%;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
